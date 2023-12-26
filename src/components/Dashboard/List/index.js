@@ -50,7 +50,7 @@ function List({ coin }) {
             </Tooltip>
 
             <Tooltip title="Current Price">
-            <td>
+            <td className='desktop-td-price'>
                 <h3 className='coin-price td-center-align' 
                     style={{color:coin.price_change_percentage_24h < 0 
                     ? "var(--red)"
@@ -61,6 +61,7 @@ function List({ coin }) {
                     </h3>
             </td>
             </Tooltip>
+
 
             <Tooltip title="Total Volume" placement='bottom-end' >
             <td>
@@ -82,6 +83,7 @@ function List({ coin }) {
                     <td className='mobile-td-mkt'>
                         <p className='total_volume td-right-align' placement='bottom-end' >
                         ${convertNumber(coin.market_cap)}
+                        {/* ConvertNumber function used to convert the number magnitude to M, B, T. */}
                         </p>
                     </td>
                 </Tooltip>
