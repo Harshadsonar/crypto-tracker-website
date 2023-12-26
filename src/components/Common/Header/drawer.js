@@ -19,16 +19,16 @@ export default function TemporaryDrawer() {
             onClose={() => setOpen(false)}
           >
             <div className="drawer-div">
-            <Link href="/">
+            <Link to="/">
             <p className='link'>Home</p>
             </Link>
-            <Link href="/compare">
+            <Link to="/compare">
             <p className='link'>Compare</p>
             </Link>
-            <Link href="/watchlist">
+            <Link to="/watchlist">
             <p className='link'>Watchlist</p>
             </Link>
-            <Link href="/dashboard">
+            <Link to="/dashboard">
             <p className='link'>Dashboard</p>
             </Link>
             </div>
