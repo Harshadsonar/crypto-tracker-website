@@ -4,6 +4,7 @@ import Button from '../../Common/Button';
 import iphone from "../../../assets/iphone.png";
 import gradient from "../../../assets/gradient.png";
 import { motion } from "framer-motion";
+import { RWebShare } from "react-web-share";
 
 function MainComponent() {
   return (
@@ -33,8 +34,19 @@ function MainComponent() {
             animate= {{ opacity: 1, x:0 }}
             transition={{ duration: 0.5, delay:1.5 }}
             >
-                <Button text={"Dashboard"} />
-                <Button text={"Share"} outlined={true} />
+                <a href="/dashboard">
+                    <Button text="Dashboard" />
+                </a>
+                <RWebShare
+            data={{
+              text: "Crypto Dashboard made using React JS.",
+              url: "",
+              title: "CryptoDashboard.",
+            }}
+            onClick={() => console.log("shared successfully!")}
+          >
+            <Button text="Share" outlined={true} />
+          </RWebShare>
             </motion.div>
         </div>
         <div className="phone-container">
