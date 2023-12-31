@@ -53,7 +53,7 @@ function Grid({ coin }) {
                 Total Volume : ${coin.total_volume.toLocaleString()}
                 {/* toLocaleString() method to add commas to numbers  */}
                 </p>
-            <p className='total_volume'>
+            <p className='total_volume market_cap'>
                 Market Cap : ${coin.market_cap.toLocaleString()}
                 </p>
             </div>
